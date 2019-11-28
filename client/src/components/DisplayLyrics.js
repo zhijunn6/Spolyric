@@ -42,7 +42,7 @@ class DisplayLyrics extends Component {
               width="500px"
               height="500px"
             ></img>
-            <div>No lyrics found :(</div>
+            <div>No lyrics found!</div>
             <div>Hmm... Did you open Spotify? :o</div>
           </div>
         ) : (
