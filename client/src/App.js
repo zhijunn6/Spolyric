@@ -31,14 +31,7 @@ class App extends Component {
                 render={props => (
                   <Container className="center">
                     <h1>You are now listening to...</h1>
-                    <div id="wrapper">
-                      <div id="left">
-                        <SpotifyCurrent />
-                      </div>
-                      <div id="right">
-                        <DisplayLyrics />
-                      </div>
-                    </div>
+                    <SpotifyCurrent />
                   </Container>
                 )}
               />

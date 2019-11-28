@@ -105,66 +105,90 @@ class SpotifyCurrent extends Component {
     const logo = require("./no_lyric.png");
 
     return (
-      <div className="SpotifyPlayer">
-        {!this.state.loggedIn && (
-          <Button href="https://damp-ravine-93319.herokuapp.com/api/spotify">
-            Login to Spotify{" "}
-          </Button>
-        )}
-        <div>
-          <img
-            src={this.state.nowPlaying.albumArt}
-            style={{ height: 150 }}
-            alt="Album Art"
-            onError={e => {
-              e.target.onerror = null;
-              e.target.src = String(logo);
-            }}
-          />
-        </div>
-        <div>Now Playing: {this.state.nowPlaying.name}</div>
-        <div>Artist: {this.state.nowPlaying.artistName}</div>
-        {this.state.loggedIn && (
-          <button
-            className="btn-success btn"
-            style={{
-              marginTop: "1rem"
-            }}
-            onClick={() => this.getNowPlaying()}
-          >
-            Check Now Playing
-          </button>
-        )}
+      <React.Fragment>
+        <div id="wrapper">
+          <div id="left">
+            <div className="SpotifyPlayer">
+              {!this.state.loggedIn && (
+                <Button href="https://damp-ravine-93319.herokuapp.com/api/spotify">
+                  Login to Spotify{" "}
+                </Button>
+              )}
+              <div>
+                <img
+                  src={this.state.nowPlaying.albumArt}
+                  style={{ height: 150 }}
+                  alt="Album Art"
+                  onError={e => {
+                    e.target.onerror = null;
+                    e.target.src = String(logo);
+                  }}
+                />
+              </div>
+              <div>Now Playing: {this.state.nowPlaying.name}</div>
+              <div>Artist: {this.state.nowPlaying.artistName}</div>
+              {this.state.loggedIn && (
+                <button
+                  className="btn-success btn"
+                  style={{
+                    marginTop: "1rem"
+                  }}
+                  onClick={() => this.getNowPlaying()}
+                >
+                  Check Now Playing
+                </button>
+              )}
 
-        {this.props.error.status ? (
-          ""
-        ) : (
-          <div>
-            {this.props.isAuthenticated ? (
-              <button
-                className="btn-success btn"
-                style={{
-                  marginTop: "1rem"
-                }}
-                onClick={() => this.addToDB()}
-              >
-                Save
-              </button>
-            ) : (
-              <button
-                className="btn-success btn"
-                style={{
-                  marginTop: "1rem"
-                }}
-                onClick={() => this.addToDB()}
-                disabled="disabled"
-              >
-                Save
-              </button>
-            )}
+              {this.props.error.status ? (
+                ""
+              ) : (
+                <div>
+                  {this.props.isAuthenticated ? (
+                    <button
+                      className="btn-success btn"
+                      style={{
+                        marginTop: "1rem"
+                      }}
+                      onClick={() => this.addToDB()}
+                    >
+                      Save
+                    </button>
+                  ) : (
+                    <button
+                      className="btn-success btn"
+                      style={{
+                        marginTop: "1rem"
+                      }}
+                      onClick={() => this.addToDB()}
+                      disabled="disabled"
+                    >
+                      Save
+                    </button>
+                  )}
+                </div>
+              )}
+            </div>
           </div>
-        )}
-      </div>
+          <div id="right">
+            <Container className="Lyrics">
+              {this.props.error.status ? (
+                <div>
+                  <img
+                    src={image2}
+                    alt="Check Image"
+                    width="500px"
+                    height="500px"
+                  ></img>
+                  <div>No lyrics found!</div>
+                  <div>Hmm... Did you open Spotify? :o</div>
+                </div>
+              ) : (
+                <div style={banjjak}>{lyrics}</div>
+              )}
+            </Container>
+          </div>
+        </div>
+      </React.Fragment>
     );
   }
 }
