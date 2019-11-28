@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 
 class DisplayLyrics extends Component {
   static propTypes = {
-    getLyrics: PropTypes.func.isRequired,
+    getCurrentLyrics: PropTypes.func.isRequired,
     lyrics: PropTypes.object.isRequired,
     isAuthenticated: PropTypes.bool,
     error: PropTypes.object.isRequired
