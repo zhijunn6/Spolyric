@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button } from "reactstrap";
+import { Button, Container } from "reactstrap";
 import { getLyrics, getCurrentLyrics } from "../actions/lyricsActions";
 import { addItem } from "../actions/itemActions";
 import "../App.css";
