@@ -90,7 +90,7 @@ router.get("/callback", (req, res) => {
         // we can also pass the token to the browser to make requests from there
         // 3000 is the react app
         res.redirect(
-          "http://localhost:3000/#" +
+          "https://damp-ravine-93319.herokuapp.com/#" +
             querystring.stringify({
               access_token: access_token,
               refresh_token: refresh_token
