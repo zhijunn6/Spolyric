@@ -99,7 +99,10 @@ class AppNavbar extends Component {
       <div>
         <Navbar color="dark" dark expand="sm" className="mb-5">
           <Container>
-            <NavbarBrand href="http://localhost:5000/api/spotify" style={yeet}>
+            <NavbarBrand
+              href="https://damp-ravine-93319.herokuapp.com/api/spotify"
+              style={yeet}
+            >
               Spolyric, Spotify + Lyrics!
             </NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
