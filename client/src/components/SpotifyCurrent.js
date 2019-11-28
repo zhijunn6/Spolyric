@@ -103,6 +103,16 @@ class SpotifyCurrent extends Component {
 
   render() {
     const logo = require("./no_lyric.png");
+    console.log(this.props.error.status);
+    const { lyrics } = this.props.lyrics;
+    const image2 = require("./check_lyric.png");
+
+    const banjjak = {
+      backgroundColor: "rgb(248, 249, 250)",
+      margin: "5px",
+      paddingTop: "10px",
+      paddingBottom: "10px"
+    };
 
     return (
       <React.Fragment>
