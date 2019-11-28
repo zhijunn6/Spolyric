@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container } from "reactstrap";
-import { getLyrics } from "../actions/lyricsActions";
+import { getCurrentLyrics } from "../actions/lyricsActions";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
@@ -13,7 +13,7 @@ class DisplayLyrics extends Component {
   };
 
   componentDidMount() {
-    this.props.getLyrics();
+    this.props.getCurrentLyrics();
   }
 
   onScanClick = () => {
@@ -61,4 +61,4 @@ const mapStateToProps = state => ({
 });
 
 // allows us to take the item state and turn/map this into a component property
-export default connect(mapStateToProps, { getLyrics })(DisplayLyrics);
+export default connect(mapStateToProps, { getCurrentLyrics })(DisplayLyrics);
