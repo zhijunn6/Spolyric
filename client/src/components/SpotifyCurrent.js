@@ -107,7 +107,7 @@ class SpotifyCurrent extends Component {
     return (
       <div className="SpotifyPlayer">
         {!this.state.loggedIn && (
-          <Button href="http://localhost:5000/api/spotify">
+          <Button href="https://damp-ravine-93319.herokuapp.com/api/spotify">
             Login to Spotify{" "}
           </Button>
         )}

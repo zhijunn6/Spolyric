@@ -7,7 +7,8 @@ var stateKey = "spotify_auth_state";
 
 var client_id = "3c040bd1199c4833a260ffbbe60e36d5"; // Your client id
 var client_secret = "85f07c3e06dd441a91571a79418ad8d2"; // Your secret
-var redirect_uri = "http://localhost:5000/api/spotify/callback"; // Your redirect uri
+var redirect_uri =
+  "https://damp-ravine-93319.herokuapp.com/api/spotify/callback"; // Your redirect uri
 
 var generateRandomString = function(length) {
   var text = "";
