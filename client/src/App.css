@@ -1,0 +1,44 @@
+.remove-btn {
+  margin-right: 0.5rem;
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fate-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.fate-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 1000ms ease-in;
+}
+
+.SpotifyPlayer {
+  margin-top: 10rem;
+  text-align: center;
+}
+
+.Lyrics {
+  text-align: center;
+}
+
+#wrapper {
+  display: flex;
+}
+
+#left {
+  margin-top: 5rem;
+  flex: 1;
+}
+
+#right {
+  margin-top: 5rem;
+  flex: 0 0 65%;
+}

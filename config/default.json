@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://enkidu:daesang212@cluster0-jinu6.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "il_myJwtSecret"
+}
