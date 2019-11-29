@@ -29,7 +29,7 @@ export const getCurrentLyrics = ({ name, artistName }) => dispatch => {
   dispatch(setLyricsLoading());
 
   axios
-    .post("/api/lyrics", body, config)
+    .get("/api/lyrics", body, config)
     .then(res =>
       dispatch({
         type: GET_LYRICS,

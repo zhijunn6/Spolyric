@@ -7,12 +7,12 @@ const apikey =
 
 const SongLyrics = require("../../models/SongLyrics");
 
-router.post("/", (req, res) => {
+router.get("/", (req, res) => {
   const { name, artistName } = req.body;
   console.log("Body");
   console.log(req.body);
 
-  const querystr = `https://orion.apiseeds.com/api/music/lyric/${artistName}/${name}?apikey=0ADozHTiy1E1xRSK47KbtZaGQfJKh3G10pQTYAwyVBJDUrWFB3l2ME7xrGRT9bKI`;
+  const querystr = `https://orion.apiseeds.com/api/music/lyric/${artistName}/${name}?apikey=${apikey}`;
 
   axios
     .get(querystr)
