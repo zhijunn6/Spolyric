@@ -7,7 +7,7 @@ const apikey =
 
 const SongLyrics = require("../../models/SongLyrics");
 
-router.get("/", (req, res) => {
+router.post("/", (req, res) => {
   const { name, artistName } = req.body;
   console.log("Body");
   console.log(req.body);
