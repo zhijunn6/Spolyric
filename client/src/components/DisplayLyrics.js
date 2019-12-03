@@ -46,7 +46,8 @@ class DisplayLyrics extends Component {
             <div>Hmm... Did you open Spotify? :o</div>
           </div>
         ) : (
-          <div style={banjjak}>{lyrics}</div>
+          // <div style={banjjak}>{lyrics}</div>
+          <textarea>{lyrics}</textarea>
         )}
       </Container>
     );
